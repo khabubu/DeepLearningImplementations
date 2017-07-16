@@ -309,14 +309,14 @@ def load(model_name, img_dim, nb_patch, bn_mode, use_mbd, batch_size):
 
     if model_name == "generator_unet_upsampling":
         model = generator_unet_upsampling(img_dim, bn_mode, model_name=model_name)
-        print "generator_unet_upsampling", model.summary()
+        print model.summary()
         from keras.utils.visualize_util import plot
         plot(model, to_file='../../figures/%s.png' % model_name, show_shapes=True, show_layer_names=True)
         return model
 
     if model_name == "generator_unet_deconv":
         model = generator_unet_deconv(img_dim, bn_mode, batch_size, model_name=model_name)
-        print "generator_unet_deconv", model.summary()
+        print model.summary()
         from keras.utils.visualize_util import plot
         plot(model, to_file='../../figures/%s.png' % model_name, show_shapes=True, show_layer_names=True)
         return model
