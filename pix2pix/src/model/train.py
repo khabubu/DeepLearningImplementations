@@ -152,6 +152,9 @@ def train(**kwargs):
                 gen_weights_path = os.path.join('../../models/%s/gen_weights_epoch%s.h5' % (model_name, e))
                 generator_model.save_weights(gen_weights_path, overwrite=True)
 
+                gen_path = os.path.join('../../models/%s/gen_epoch%s.h5' % (model_name, e))
+                generator_model.save(gen_path, overwrite=True)
+
                 disc_weights_path = os.path.join('../../models/%s/disc_weights_epoch%s.h5' % (model_name, e))
                 discriminator_model.save_weights(disc_weights_path, overwrite=True)
 
