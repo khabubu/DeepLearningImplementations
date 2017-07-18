@@ -134,7 +134,7 @@ def train(**kwargs):
                                                 ("G logloss", gen_loss[2])])
 
                 # Save images for visualization
-                if False && (batch_counter % (n_batch_per_epoch / 2) == 0):
+                if False and (batch_counter % (n_batch_per_epoch / 2) == 0):
                     # Get new images from validation
                     data_utils.plot_generated_batch(X_full_batch, X_sketch_batch, generator_model,
                                                     batch_size, image_dim_ordering, "training")
